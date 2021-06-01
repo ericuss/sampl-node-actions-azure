@@ -51,6 +51,7 @@ jobs:
     name: deploy dev
     environment: dev
     needs: build
+    runs-on: ubuntu-latest
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v2
