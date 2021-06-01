@@ -10,3 +10,15 @@ az webapp create \
     --plan sp-test-app-node-actions-azure \
     --resource-group rg-test-app-node-actions-azure \
     --runtime "node|10.14"
+
+az webapp create \
+    --name test-app-node-actions-azure-stg \
+    --plan sp-test-app-node-actions-azure \
+    --resource-group rg-test-app-node-actions-azure \
+    --runtime "node|10.14"
+    
+az webapp create \
+    --name test-app-node-actions-azure-pro \
+    --plan sp-test-app-node-actions-azure \
+    --resource-group rg-test-app-node-actions-azure \
+    --runtime "node|10.14"
