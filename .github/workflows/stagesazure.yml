@@ -66,7 +66,7 @@ jobs:
   deploy_stg:
     name: deploy stg
     environment: stg
-    needs: dev
+    needs: deploy_dev
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
@@ -82,7 +82,7 @@ jobs:
   deploy_pro:
     name: deploy pro
     environment: pro
-    needs: stg
+    needs: deploy_stg
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
