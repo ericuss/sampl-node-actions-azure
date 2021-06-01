@@ -54,11 +54,11 @@ jobs:
     steps:
       - name: Test
         env:
-          TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TEST_SECRET: ${{ secrets.TEST_SECRET }}
+          AZURE_WEBAPP_NAME: ${{ secrets.AZURE_WEBAPP_NAME }}
+          AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         run: |
-          echo ${#TEST_GITHUB_TOKEN}
-          echo ${#TEST_SECRET}
+          echo ${#AZURE_WEBAPP_NAME}
+          echo ${#AZURE_WEBAPP_PUBLISH_PROFILE}
       - name: Download artifact
         uses: actions/download-artifact@v2
         
